@@ -1,0 +1,140 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #0d0d0d;  /* Deep black background */
+    color: #fff;  /* White text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Search Bar */
+form {
+    width: 100%;
+    max-width: 400px;
+    background: #1a1a1a;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 0px 10px rgba(144, 0, 255, 0.8);
+}
+
+#search {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background: transparent;
+    color: #fff;
+    outline: none;
+}
+
+#search::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+form button {
+    background: #9000ff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #b000ff;
+}
+
+/* User Card */
+.card {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(144, 0, 255, 0.7);
+    text-align: center;
+    max-width: 400px;
+    margin-top: 20px;
+}
+
+.card img.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #9000ff;
+    margin-bottom: 10px;
+}
+
+.userDetails h2 {
+    color: #b000ff;
+    margin-bottom: 5px;
+}
+
+.userDetails p {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.userDetails ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.userDetails ul li {
+    font-size: 14px;
+    color: #fff;
+}
+
+.userDetails ul li strong {
+    display: block;
+    font-size: 16px;
+    color: #9000ff;
+}
+
+/* Repositories */
+#repos {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.repo {
+    background: #9000ff;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+.repo:hover {
+    background: #b000ff;
+}
+
+/* Error Messages */
+.error {
+    background: #ff0048;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 20px;
+}
