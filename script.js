@@ -2,7 +2,7 @@ const apiurl = 'https://api.github.com/users/';
 const form = document.getElementById('form');
 const main = document.getElementById('main');
 const search = document.getElementById('search');
-
+// main 
 async function getUser(username) {
     try {
         const { data } = await axios.get(apiurl + username);
@@ -12,7 +12,7 @@ async function getUser(username) {
         main.innerHTML = `<p class="error">❌ No profile found with this name.</p>`;
     }
 }
-
+//gets reposs
 async function getRepo(username) {
     try {
         const { data } = await axios.get(apiurl + username + '/repos?sort=created');
@@ -21,7 +21,7 @@ async function getRepo(username) {
         document.querySelector('#repos').innerHTML = `<p class="error">⚠️ Error fetching repositories.</p>`;
     }
 }
-
+// manipulates dom
 function getCard(user) {
     const card = `
     <div class="card">
@@ -55,7 +55,7 @@ function addRepoToCard(repos) {
         reposEl.appendChild(repoEl);
     });
 }
-
+// first thing that happens form click --> getUser--> getCard , getRepo-->addrepotocard
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const user = search.value.trim();
