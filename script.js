@@ -51,7 +51,7 @@ function addRepoToCard(repos) {
         repoEl.classList.add('repo');
         repoEl.href = repo.html_url;
         repoEl.target = '_blank';
-        repoEl.innerText = repo.name;
+        repoEl.innerText = repo.name
         reposEl.appendChild(repoEl);
     });
 }
